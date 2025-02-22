@@ -21,7 +21,7 @@ public_users.post('/register', (req, res) => {
 public_users.get('/', (req, res) => {
 	//Write your code here
 	new Promise((resolve) => {
-		resolve(books);
+		resolve(JSON.stringify(books));
 	}).then((obj) => {
 		res.send(JSON.stringify(obj, null, 4));
 	});
